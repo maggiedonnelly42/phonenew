@@ -1,0 +1,33 @@
+<%- include('../partials/header') -%>
+   
+ 
+       
+<a
+href="/add">Add
+ A Phone</a>
+    
+ <h2>Phone Shop</h2>
+
+<div
+id="productsContainer">
+       
+<% result.forEach(function(item)
+ { %>
+           
+<div class="product">
+               
+<p>ID:<%= item.id %></p>             
+<p>Make:<%= item.make %></p>             
+<h1>Model:<%= item.model %></h1>          
+<p>Price:<%= item.price %></p>
+           
+<a
+href="/deleteProduct/<%=item.id %>">delete</a>
+
+</div>
+       
+<% }); %>
+</div>
+
+
+<%- include('../partials/footer') -%>
